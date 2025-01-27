@@ -1,0 +1,158 @@
+body {
+    background-color: #f0f0f0;
+    background: url(./assets/img/background_image.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+.welcome-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #e8d8d800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 2em;
+    animation: fadeUp 1.5s ease-out;
+    z-index: 1000;
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.calculator {
+    width: 100%;
+    max-width: 400px;
+    background-color: #4b85a3b3;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1.5s ease-out forwards;
+    animation-delay: 3s;
+}
+
+.display input {
+    width: 100%;
+    height: 80px;
+    background-color: #222;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.8em;
+    color: #fff;
+    text-align: right;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #444;
+    border: none;
+    border-radius: 30px;
+    padding: 15px;
+    font-size: 1.2em;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.equals-btn {
+    background-color: #ff9500;
+    color: #fff;
+}
+
+.equals-btn:hover {
+    background-color: #ffae42;
+}
+
+@media (max-width: 500px) {
+    .btn {
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .display input {
+        height: 50px;
+        font-size: 1.5em;
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 20px; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-github {
+    cursor: pointer;
+    display: flex;
+    gap: 0.5rem;
+    border: none;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -webkit-backdrop-filter: blur(32px);
+    backdrop-filter: blur(32px);
+    border-radius: 100px;
+    font-weight: 800;
+    place-content: center;
+    padding: 0.75rem 1rem;
+    font-size: 0.825rem;
+    line-height: 1rem;
+    background-color: rgb(34 34 34);
+    box-shadow: inset 0 1px 0 0 rgb(255 255 255 / 0%), inset 0 0 0 1px rgb(255 255 255);
+    color: #fff;
+  }
+  
+  .btn-github:hover {
+    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.08),
+      inset 0 0 0 1px rgba(252, 232, 3, 0.08);
+    color: #ff9500;
+    transform: translate(0, -0.25rem);
+    background-color: rgb(34 34 34);
+  }  
+
+  a.btn-github {
+    text-decoration: none; /* Remove underline */
+    display: flex; /* Ensure the button layout remains intact */
+    align-items: center; /* Center content vertically */
+    gap: 0.5rem;
+}
+
