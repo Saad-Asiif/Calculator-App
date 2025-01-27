@@ -16,3 +16,4 @@ Welcome to the Calculator Web App, a simple and interactive calculator designed 
 - **CSS3** - Styling, animations, and responsiveness.
 - **JavaScript** - Functionality of the calculator, including arithmetic operations and event handling.
 
+![Image](https://github.com/user-attachments/assets/36622ce7-29fc-442b-8ecb-9aaea6bbff67)
